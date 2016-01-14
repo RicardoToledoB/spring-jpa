@@ -1,0 +1,31 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+.abs-center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+form input[type=file] {
+  display: none;
+}
+form#new-marca {
+  width: 300px;
+}
+.panel-footer {
+  background-color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+.panel-footer > button {
+  margin-right: 10px;
+}
+.not-found {
+	color: #ccc;
+	font-family: 'book antigua';
+	font-size: 28px;
+}
