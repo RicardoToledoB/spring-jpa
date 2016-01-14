@@ -78,17 +78,17 @@ public class UsuarioController {
     }
     
     @RequestMapping(value="/usuario/edit/{id}",method = RequestMethod.POST)
-    public String edit( @ModelAttribute @Valid Usuario usuario,@PathVariable int id,BindingResult result) {
+    public ModelAndView edit( @ModelAttribute @Valid Usuario usuario,@PathVariable int id,BindingResult result) {
         if(result.hasErrors()){
-            //ModelAndView modelAndView = new ModelAndView("/usuario/edit");
+            ModelAndView modelAndView = new ModelAndView("/usuario/edit");
             usuario.setId(id);
-            //modelAndView.addObject("usuario",usuario);
-            return "/usuario/edit";
+            modelAndView.addObject("usuario",usuario);
+            return modelAndView;
         }else{
         usuario.setId(id);
-        //ModelAndView modelAndView = new ModelAndView("/usuario/home");
+        ModelAndView modelAndView = new ModelAndView("/usuario/home");
         usuarioService.edit(usuario);
-        return "/usuario/home";// modelAndView;
+        return modelAndView;
         }
     }
     
