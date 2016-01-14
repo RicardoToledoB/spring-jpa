@@ -37,8 +37,8 @@
                     <ul class="nav navbar-nav">
                         <li ><a href="${pageContext.request.contextPath}/">Home</a></li>
                         <li class="active"> <a href="${pageContext.request.contextPath}/usuario/home">Usuario</a></li>
-                        
-                     
+
+
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -48,34 +48,34 @@
             <div class="row">
                 <br>
                 <spring:url value="/resources/img/logoSpring.png" var="logo"/>
-                <h3><img src="${logo}"/> Nuevo Usuario </h3>
+                <h3><img src="${logo}"/> Editar Usuario</h3>
                 <br>
-               <form:form method="POST" commandName="usuario" action="${pageContext.request.contextPath}/usuario/edit/${id}">
+                <form:form method="POST" commandName="usuario" action="${pageContext.request.contextPath}/usuario/edit">
+                    <form:hidden path="id"/>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <form:input path="nombre" class="form-control" id="nombre" placeholder="Nombre" />
+                        <form:errors path="nombre" />
+                    </div>
+                    <div class="form-group">
+                        <label for="apepat">1er Apellido</label>
+                        <form:input path="apepat" class="form-control" id="apepat" placeholder="1 er Apellido" />
+                        <form:errors path="apepat" />
+                    </div>
+                    <div class="form-group">
+                        <label for="apemat">2do Apellido</label>
+                        <form:input path="apemat" class="form-control" id="apemat" placeholder="2 do Apellido" />
+                        <form:errors path="apemat" />
+                    </div>
 
                     <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <form:input path="nombre" class="form-control" id="nombre" placeholder="Nombre" />
-                    <form:errors path="nombre" />
-                </div>
-                <div class="form-group">
-                    <label for="apepat">1er Apellido</label>
-                    <form:input path="apepat" class="form-control" id="apepat" placeholder="1 er Apellido" />
-                    <form:errors path="apepat" />
-                </div>
-                <div class="form-group">
-                    <label for="apemat">2do Apellido</label>
-                    <form:input path="apemat" class="form-control" id="apemat" placeholder="2 do Apellido" />
-                    <form:errors path="apemat" />
-                </div>
+                        <label for="estado">Estado</label>
+                        <form:input path="estado" class="form-control" id="estado" placeholder="Estado" />
+                        <form:errors path="estado" />
+                    </div>
 
-                <div class="form-group">
-                    <label for="estado">Estado</label>
-                    <form:input path="estado" class="form-control" id="estado" placeholder="Estado" />
-                    <form:errors path="estado" />
-                </div>
-
-                <button type="submit" class="btn btn-primary">Guardar</button>
-            </form:form>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </form:form>
 
             </div>
 

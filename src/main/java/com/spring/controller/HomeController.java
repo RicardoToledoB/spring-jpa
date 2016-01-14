@@ -16,9 +16,6 @@ public class HomeController {
     public String homeUsuario(){
         return "/usuario/home";
     }
-    @RequestMapping("/usuario/error")
-    public String homeError(){
-        return "/usuario/error";
-    }
+   
     
 }
