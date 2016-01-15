@@ -1,0 +1,10 @@
+{
+  "name": "spring-jpa",
+  "scripts": {
+  },
+  "env": {
+  },
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
