@@ -67,6 +67,20 @@
                         <form:input path="apemat" class="form-control" id="apemat" placeholder="2 do Apellido" />
                         <form:errors path="apemat" />
                     </div>
+                    <div class="input-group date form-group">
+                        <label for="apemat">Fecha Nacimiento</label>
+                        <form:input path="fecnac" type="text" class="form-control fecnac"  placeholder="Fecha Nacimiento" data-date-format="mm/dd/yyyy"/>
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                        <form:errors path="fecnac" />
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="correo">Correo Electronico</label>
+                        <form:input path="correo" class="form-control" id="correo" placeholder="Correo Electronico"/>
+                        <form:errors path="correo" />
+                    </div>
 
                     <div class="form-group">
                         <label for="estado">Estado</label>
